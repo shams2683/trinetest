@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.4em;
+}
+
+h2 {
+  font-size: 1.7rem;
+  line-height: 1.4em;
+}
+
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.4em;
+}
+
+h5 {
+  font-size: 0.75rem;
+  line-height: 1.4em;
+}
+
+.center-horizontal {
+  margin: 0 auto;
+}
+
+.margin-bottom-25 {
+  margin-bottom: 25px;
+}
+
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  background: url(../img/crowdpower-pattern.svg);
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.fortum-logo-container,
+.trine-logo-container {
+  background-color: #fff;
+}
+
+.fortum-logo,
+.trine-logo {
+  padding: 2px;
+  height: 100%;
+  width: 60px;
+}
+
+.header-text {
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.middle-content {
+  padding: 50px 0;
+}
+
+.middle-grid {
+  display: grid;
+  overflow: hidden;
+  width: 75%;
+  grid-template-columns: 260px 130px auto;
+  grid-template-areas:
+    "image text-1 text-1"
+    "image circle-text text-2"
+    "image button button";
+}
+
+.image-block {
+  grid-area: image;
+}
+
+.text-block-1 {
+  grid-area: text-1;
+}
+
+.text-block-2 {
+  grid-area: text-2;
+}
+
+.circle-text-container {
+  grid-area: circle-text;
+}
+
+.button-block {
+  grid-area: button;
+}
+
+.section-bottom {
+  width: 100%;
+  background: url(../img/crowdpower-pattern.svg);
+  background-size: cover;
+  background-position: center;
+  padding: 25px 0;
+}
+
+.about {
+  background: #fff;
+  width: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-column-gap: 20px;
+}
+
+.about-image {
+  width: 100%;
+  height: 281px;
+}
+
+.button-green {
+  background-color: green;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.button-white {
+  background-color: #fff;
+  border: 1px solid black;
+  color: black;
+  font-weight: 700;
+  border-radius: 50px;
+  line-height: 30px;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  padding: 0 20px;
+}
+
+.button-white i {
+  margin-left: 10px;
+}
+
+.about-description {
+  margin: 10px 0;
+}
+
+.text-container {
+  padding: 10px 0 50px 0;
+  position: relative;
+}
+
+.image-full-circle {
+  width: 240px;
+}
+
+.circle-heading {
+  margin-bottom: 10px;
+}
+
+.circle-description {
+  margin-bottom: 10px;
+  font-size: 1.125rem;
+}
+
+.circle-text {
+  background-color: #ffddc5;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  text-transform: uppercase;
+  line-height: 1.4em;
+  padding-top: 37px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.desktop-hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .middle-grid {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 852px) {
+  .image-container {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tablet-hidden {
+    display: none;
+  }
+
+  .tablet-full-width {
+    width: 100%;
+  }
+
+  .middle-grid {
+    grid-template-columns: 5% auto 130px 120px;
+    grid-template-areas:
+      ". text-1 text-1 image "
+      ". text-2 text-2 image "
+      ". . circle-text image";
+  }
+
+  .about {
+    grid-template-columns: unset;
+    grid-column-gap: 0;
+  }
+
+  .button-green {
+    border-radius: 0;
+    padding: 20px 20px;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .mobile-margin-bottom-60 {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mobile-hidden {
+    display: none;
+  }
+
+  .circle-text-container {
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+}
